@@ -22,7 +22,14 @@ Alltrails
 
 ### Google map timeline export
 
+
 Google map previously provide a really good timeline storage until 2024, if you happen had exported previously. I recommand you.
 
 #### Project OSRM: track you driving history.
+
+
+Visualization 
+-------------
+
+I use KeplerGL as the visualization tool of this project, this is easy to use, suitable to large-scale dataset and most importantly, open source!
 
