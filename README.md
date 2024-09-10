@@ -20,6 +20,9 @@ Folder of your export
 
 Alltrails
 
+Example: 
+[My hiking history](https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/k72pmlbsuptnu14275cf8/keplergl_p8l9r2g.json?rlkey=pcwgiqd32n1ppuao6awiuqu6i&dl=0)
+
 ### Google map timeline export
 
 
