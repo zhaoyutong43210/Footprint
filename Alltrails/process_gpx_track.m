@@ -32,7 +32,7 @@ plot(lat,long, '.-')
 elev_raw = [0,diff(elev)];
 elev_mid = [0,diff(smoothdata(elev,"gaussian",60))];
 elev_mid(elev_mid<0.0)=0;
-elev_gain = sum(elev_mid);
+elev_gain = cumsum(elev_mid);
 
 dist = [];
 speed = [];
@@ -54,7 +54,19 @@ dist_trip = cumsum(dist);
 
 dist_s = smoothdata(dist_trip,"loess",30);
 total_dist = (dist_trip(end)/1e3);% in km
+%% split chart (moving & resting)
+km_n = floor(total_dist);
 
+for km = 1:km_n
+    [~, ind] = min(abs(dist_trip/1e3-km));
+    km_t(km) = dt(ind);
+    km_elev(km) = elev_gain(ind);
+
+end
+
+km_dt = minutes(km_t-[dt(1),km_t(1:end-1)]);
+km_delev = km_elev - [elev_gain(1), km_elev(1:end-1)];
+%%
 dts = seconds(dt-dt(1));
 dts(1)=1;
 dta = movsum([1,diff(dts)],100);
@@ -69,11 +81,13 @@ pace_ave2 = mean(pace(pace<human_pace_range(2))); % unit = min/km, trip only inc
 
 speed = 1./pace; % unit = km/hour
 
-plot(dt,dist_s);hold on;plot(dt,dist_trip);hold off
+plot(dt,dist_s,'.-');hold on;plot(dt,dist_trip);hold off
 
 trip.distance = total_dist;
-trip.elev_gain = elev_gain;
+trip.elev_gain = elev_gain(end);
 trip.pace_overall = pace_ave1;
 trip.pace_moving = pace_ave2;
 trip.time_overall = dts(end);
+trip.split_chart = [[1:km_n]',km_dt',km_delev'];
+trip.raw_data = {dt',lat, long, elev};
 end
