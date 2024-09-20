@@ -1,12 +1,12 @@
 clear;
 clc;
-load('\\ott-ntap4a\osgs\users\yutzhao\utils\location_history_result.mat')
+load('.\location_history_result.mat')
 
 geotable_whole = table();
 geojson_txt = [];
 
-time_start = datetime(2021,01,01);
-time_end = datetime(2021,12,31);
+time_start = datetime(2022,01,01);
+time_end = datetime(2022,12,31);
 
 header1 = ['{',newline,'"type": "FeatureCollection",',newline,...
             '"features": [',newline];
@@ -31,14 +31,14 @@ r = 6370996.81; %m
 my_path_array ={};
 my_point_array ={};
 
-
+ida = 1;
 for n = 1:length(path_summary)
 
     path = path_summary(n,:);
     
     time = path{1};
     
-    if time <time_start || time > time_end
+    if (time(1) <time_start) || (time(2) > time_end)
         continue
     end
 
@@ -111,6 +111,7 @@ try
     my_point_array{ida} = data2;
 
     my_path_array{ida} = P;
+    ida = ida+1;
 
 catch ME
     msg = ['An error occured:',ME.message];

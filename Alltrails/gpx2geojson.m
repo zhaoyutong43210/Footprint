@@ -57,7 +57,7 @@ elseif  contains(fn,"#")
     meta.time = datetime(datetime(year,month,day),'Format',keplerfmt);
     meta.name = fn(1:idx-1);
 else 
-    meta.time = ' ';
+    meta.time = datetime(datetime(2018,8,1),'Format',keplerfmt);
     meta.name = fn(1:end-4);
     msg = ['no time data found in ',fn,'!'];
     warning(msg)
