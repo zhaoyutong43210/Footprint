@@ -1,3 +1,5 @@
+[EN](./README.md) [中文](./README_cn.md)
+
 # Footprint
 
 ## Preface
