@@ -27,7 +27,7 @@
 输出文件：Geojson 文件 - *.json
 
 可视化示例： 
-[My hiking history before 2025](https://kepler.gl/demo/map?mapUrl=https://raw.githubusercontent.com/zhaoyutong43210/iSite/refs/heads/master/footprint/hiking_skiing_running_export2025.json)
+[My hiking history before 2025](https://kepler.gl/demo/map?mapUrl=https://raw.githubusercontent.com/zhaoyutong43210/iSite/refs/heads/master/footprint/footprint_byfoot2025.json)
 
 ### 谷歌地图时间轴导出: [My Timeline](https://support.google.com/maps/answer/6258979?hl=en&co=GENIE.Platform%3DAndroid)
 
