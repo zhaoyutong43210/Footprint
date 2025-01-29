@@ -26,7 +26,7 @@ Example folder:
 TBA
 
 Example Output:
-[My hiking history before 2025](https://kepler.gl/demo/map?mapUrl=https://raw.githubusercontent.com/zhaoyutong43210/iSite/refs/heads/master/footprint/hiking_skiing_running_export2025.json)
+[My hiking history before 2025](https://kepler.gl/demo/map?mapUrl=https://raw.githubusercontent.com/zhaoyutong43210/iSite/refs/heads/master/footprint/footprint_byfoot2025.json)
 
 Google map timeline export
 --------------------------
