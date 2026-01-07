@@ -45,7 +45,17 @@ However, it provides a good key information if.
 GPS Coordinates from your Photos
 --------------------------------
 
+To be added in the future.
+1) read the geo data direct from the picture.
+2) If step 1 failed, then use AI to guess the possible geolocation of the picture was taken.
+
 Visualization
 -------------
 
 I use KeplerGL as the visualization tool of this project, this is easy to use, suitable to large-scale dataset and most importantly, open source!
+
+### Light up the map
+-  World Administrative Divisions: [level 0-3 data by GADM](https://gadm.org/data.html)   [1st level data by arcgis](https://hub.arcgis.com/datasets/esri::world-administrative-divisions/explore?location=17.447293%2C129.958070%2C2.38) 
+-  Mountains ranges [World Mountain Ranges by ArcGIS](https://www.arcgis.com/apps/mapviewer/index.html?webmap=e570949aec0f4f3fb15b90e6a776c4c1) [Peakery Map](https://peakery.com/map/)
+-  
+
